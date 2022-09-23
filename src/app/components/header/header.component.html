@@ -1,0 +1,29 @@
+<header class="header">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <div class="grid__container">
+        <nav class="header__nav">
+          <a
+            class="header__nav-item"
+            mat-raised-button
+            routerLink="/"
+            routerLinkActive="header__nav-item--active"
+            [routerLinkActiveOptions]="{exact: true}"
+          >
+            Photos
+          </a>
+          <a
+            mat-raised-button
+            routerLink="/favorites"
+            routerLinkActive="header__nav-item--active"
+            [routerLinkActiveOptions]="{exact: true}"
+            [matBadge]="favoritePhotosCount$ | async"
+            matBadgeColor="warn"
+          >
+            Favorites
+          </a>
+        </nav>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>

@@ -1,0 +1,22 @@
+<div class="favorites">
+  <div class="grid__container">
+    <div class="grid__row">
+      <a
+        *ngFor="let photoId of photos$ | async"
+        [routerLink]="['/photos', photoId]"
+        class="grid__col"
+      >
+        <mat-card>
+          <img
+            mat-card-image
+            [src]="apiUrl + '/id/' + photoId + '/300'"
+            [alt]="'Random Photo' + photoId"
+            draggable="false"
+          >
+        </mat-card>
+      </a>
+    </div>
+
+    <div *ngIf="!(photos$ | async)?.length">No favorite photos.</div>
+  </div>
+</div>

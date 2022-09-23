@@ -1,0 +1,10 @@
+.favorites {
+  padding: 94px 0 30px;
+
+  .mat-card {
+    padding-bottom: 0;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+  }
+}

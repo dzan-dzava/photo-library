@@ -1,0 +1,21 @@
+<div class="photos">
+  <div class="grid__container">
+    <div class="grid__row">
+      <div class="grid__col" *ngFor="let photo of randomPhotos">
+        <mat-card [class.selected]="photo.selected">
+          <img
+            mat-card-image
+            [src]="apiUrl + '/id/' + photo.id + '/300'"
+            [alt]="'Random Photo' + photo.id"
+            draggable="false"
+            (click)="onClick(photo)"
+          >
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="photos__spinner">
+    <mat-spinner [diameter]="60" #spinner></mat-spinner>
+  </div>
+</div>

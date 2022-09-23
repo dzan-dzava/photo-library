@@ -1,0 +1,20 @@
+<div class="detail-view" *ngIf="photoDetails">
+  <div class="grid__container">
+    <mat-card>
+      <img
+        mat-card-image
+        [src]="photoDetails.download_url"
+        [alt]="'Random Photo' + photoDetails.id"
+        draggable="false"
+      >
+    </mat-card>
+
+    <button
+      mat-raised-button
+      color="warn"
+      (click)="removePhoto(photoDetails.id)"
+    >
+      Remove from favorites
+    </button>
+  </div>
+</div>

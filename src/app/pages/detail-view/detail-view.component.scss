@@ -1,0 +1,15 @@
+.detail-view {
+  padding: 94px 0 30px;
+
+  .mat-card {
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .mat-raised-button {
+    display: block;
+    margin: 0 auto;
+  }
+}
